@@ -19,7 +19,7 @@ function findAdjacent2(l)
         }
         else
         {
-            // Una vez cargados los 2 primeros números en "n1" y"n2", se busca la mayor suma de números adyacentes en la lista.
+            // Una vez cargados los dos primeros números en "n1" y"n2", se busca la mayor suma de números adyacentes en la lista.
             if(n1+n2<nant+l[n])
             {
                 // Si la suma del número anterior de la lista y el número actual son mayores que la suma de los 2 números guardados, se remplazan.
