@@ -1,0 +1,35 @@
+function findAdjacent2(l) 
+{
+    // Dos variables para almacenar los números adyacentes "n1" y "n2", una variable para almacenar el número anterior de la lista "nant".
+    var n1,n2,nant;
+    
+    // Se recorre la Lista.
+    for(n=0;n<l.length;n++)
+    {
+        if(n1==null)
+        {
+            // Se carga el primer número de la lista
+            n1=l[n];
+        }
+        else if(n2==null)
+        {
+            // Se carga el segundo número de la lista y se deja como el último recorrido.
+            n2=l[n];
+            nant=n2;    
+        }
+        else
+        {
+            // Una vez cargados los 2 primeros números en "n1" y"n2", se busca la mayor suma de números adyacentes en la lista.
+            if(n1+n2<nant+l[n])
+            {
+                // Si la suma del número anterior de la lista y el número actual son mayores que la suma de los 2 números guardados, se remplazan.
+                n1=nant;
+                n2=l[n];                
+            }
+            // Se guarda el número actual recorrido.
+            nant=l[n]; 
+        }
+    }
+    //Se retorna la mayor suma de números adyacentes.
+    return n1+n2;
+}
